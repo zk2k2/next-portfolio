@@ -25,3 +25,32 @@ body {
     text-wrap: balance;
   }
 }
+
+.shimmer-effect {
+  color: grey;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.shimmer-effect:hover {
+  -webkit-mask: linear-gradient(120deg, #000 25%, #0005, #000 75%) right/250%
+    100%;
+  animation: shimmer 1s forwards;
+}
+
+@keyframes shimmer {
+  100% {
+    -webkit-mask-position: left;
+  }
+}
+
+.fade-transition {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
